@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" class="no-js">
+<!-- the "no-js" class is for Modernizr. -->
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title>Vim Scripts</title>
+
+	<meta name="description" content="This mirror provides access to any of the scripts on vim.org using Git. It was inspired by Pathogen's simple approach to Vim plugins." />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  
+
+  <!--[if ! lte IE 6]><!-->
+  <!--<![endif]-->
+
+	<!--[if lte IE 6]>
+    <link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css">
+  <![endif]-->
+
+  <script type="text/javascript" src="jquery-1.5.1.min.js"></script>
+  <script type="text/javascript" src="jquery-ui-1.8.11.custom.min.js"></script>
+<script type="text/javascript" src="filter.js"></script>
+<style type="text/css">
+  html {
+    overflow-y: scroll;
+  }
+  .none {
+    display:none !important;
+  }
+
+</style>
+
+</head>
+
+<body>
+<div id='items'> /<input id="filter" type="text" style="border:none"/><table width="50%"> <thead> <tr> <th>Wiki Items</th> </tr> </thead> <tbody id="all_items"> <tr class="loading"> <td>loading wiki items....</td> </tr> </tbody> <tbody class="none" id="search_results"> </tbody> </table> </div>
+
+
+</div>
+</body>
+</html>

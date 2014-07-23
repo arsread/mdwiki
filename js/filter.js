@@ -48,7 +48,7 @@
         if ($this.current != match) break;
         if ($this.matches.length >= 15) break;
         var s = wiki_items[pos];
-        if (s && s.toLowerCase().indexOf(match.toLowerCase()) >= 0) {
+        if (s.title && s.title.toLowerCase().indexOf(match.toLowerCase()) >= 0) {
           $this.matches.push(s);
           m.push(s);
         }
@@ -69,8 +69,8 @@ var Table = function(data) {
   for(var i = 0; i < data.length; i++ ) {
     var s = data[ data.length - i - 1 ];
     html += '' +
-      '<tr id="' + s + '">' +
-      '<td class="name">' + '<a href="http://arsread.wicp.net/wiki/#!' + s + '.md">' + s + '</a></td>' +
+      '<tr id="' + s.id + '">' +
+      '<td class="name">' + '<a href="http://arsread.wicp.net/wiki/#!' + s.id + '.md">' + s.title + '</a></td>' +
       '</tr>'
   }
   return html;
@@ -93,4 +93,6 @@ jQuery(function($) {
       setTimeout(function() {$('#all_items').html(Table(wiki_items))}, 10);
     }
   });
+
+
 });
