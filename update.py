@@ -3,7 +3,7 @@ import json
 
 jsonList = []
 files = [f for f in os.listdir('.') if os.path.isfile(f)]
-for f in files:
+for f in sorted(files):
     if not f.endswith('.md'):
         continue
     if f == 'index.md' or f == 'navigation.md':
@@ -16,4 +16,4 @@ for f in files:
         item['id'] = str(f).replace('.md', '')
         jsonList.append(item)
 with open('items.json', 'w') as outfile:
-    json.dump(jsonList, outfile)
+    json.dump(sorted(jsonList, key=lambda x: x['title'], reverse=True), outfile)

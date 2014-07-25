@@ -1,4 +1,4 @@
-#Install and configure Ubuntu 12.04 LTS Desktop
+#Installation and configuration on Ubuntu 12.04 LTS Desktop
 
 ##Install Ubuntu from cd
 
@@ -76,9 +76,18 @@ Vim is defaultly installed in ubuntu, so what should be done is the configuratio
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 Then run *:PluginInstall* in vim.
-- Install ctags for vim
+- Install ctags for vim:
 ```bash
 sudo apt-get install ctags
+```
+- To install [solarized color setting](https://github.com/altercation/vim-colors-solarized), download solarized:
+```bash
+cd ~/.vim/bundle
+git clone git://github.com/altercation/vim-colors-solarized.git
+```
+and move the .vim to certain directory:
+```bash
+mv solarized.vim ~/.vim/colors/
 ```
 
 ###tmux
