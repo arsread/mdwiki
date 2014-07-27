@@ -218,5 +218,20 @@ ENABLE_LAPTOP_MODE_ON_BATTERY = 1
 ```
 Then restart the service.
 
+##Configure behaviour when closing the lid
+Modify */etc/systemd/logind.conf*:
+```bash
+HandleLidSwitch=ignore
+```
+Then restart.
+
 ##Rtcwake and crontab
-To be completed...
+Rtcwake is a Linux command to put the computer into sleep or hibernation for a fixed time. Combine it with crontab, we can schedule the computer to work and rest regularly:
+```bash
+sudo crontab -e
+```
+Documents for crontab and rtcwake can be easily found online. In my case:
+```
+0 20 * * * rtcwake -m disk -s 28800
+30 8 * * * reboot
+```
