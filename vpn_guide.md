@@ -40,6 +40,9 @@ Go back to Settings, switch on the "VPN" button and hence get connected.
    - IPSec preshared key: the pre-shared key
 3. Press back, then connect using the username/password
 
+Attention:
+According to [related issues](https://code.google.com/p/android/issues/detail?id=23124), it may not be available to connect to l2tp VPN from Android. Try [#264 reply](https://code.google.com/p/android/issues/detail?id=23124#c264) of the issue and see if it works.
+
 ##Windows (Windows 7)
 1. Open Network and Sharing Center.  
 
