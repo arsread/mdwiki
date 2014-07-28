@@ -1,7 +1,7 @@
 #Connect to my VPN Server based on L2TP/IPsec
 
 Bacically I provide a VPN service based on L2TP/IPsec with a machine in my appartment. You can connect it with iOS, Mac OS, Windows, Android, Linux and so on.  
-This is a guidance is about how to connect to my server([arsread.wicp.net](arsread.wicp.net)). For getting username, password and pre-shared key, please contact me.
+This is a guidance is about how to connect to my server([arsread.wicp.net](http://arsread.wicp.net)). For getting username, password and pre-shared key, please contact me.
 
 Note:
 Currently my server is set to open everyday from 6:30 to 20:00 CET, which in China Standard Time is 12:30 to 2:00 next day. 

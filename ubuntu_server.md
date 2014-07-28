@@ -235,3 +235,18 @@ Documents for crontab and rtcwake can be easily found online. In my case:
 0 20 * * * rtcwake -m disk -s 28800
 30 8 * * * reboot
 ```
+
+##Update grub
+Ocationnally grub boot menu would lost its countdown. In my case, it's because some failure in rebooting. I had a workaround it by changeing the following line in */etc/grub.d/00_header*
+```bash
+set timeout=${GRUB_RECORDFAIL_TIMEOUT:--1}
+```
+into
+```bash
+set timeout=0
+```
+Then run
+```bash
+sudo update-grub
+```
+To update related files.
