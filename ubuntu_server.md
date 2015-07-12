@@ -37,6 +37,15 @@ To set up a VPN server, I followed [this documentation](https://help.ubuntu.com/
 ```bash
 sudo apt-get install xl2tpd openswan ppp
 ```
+for raspbian, also lsof should be installed:
+```bash
+sudo apt-get install lsof
+```
+note that newest openswan ```1:2.6.37-3+deb7u1``` doesn't work, so you should manually install the downgraded version:
+```bash
+wget http://snapshot.raspbian.org/201403301125/raspbian/pool/main/o/openswan/openswan_2.6.37-3_armhf.deb
+sudo dpkg -i openswan_2.6.37-3_armhf.deb
+```
 
 2. Configure the following files (samples in my case):
   - /etc/ipsec.conf
